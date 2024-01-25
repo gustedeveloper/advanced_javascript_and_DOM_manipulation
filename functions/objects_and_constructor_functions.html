@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Creating objects
+      /* let houseKeeper1 = {
+        name: "Rosa",
+        age: 31,
+        yearsOfExperience: 12,
+        tasksBestAt: ["deep cleaning", "laundry"],
+      };*/
+
+      // Creating a constructor function
+
+      function HouseKeeper(name, age, yearsOfExperience, tasksBestAt) {
+        this.name = name;
+        this.age = age;
+        this.yearsOfExperience = yearsOfExperience;
+        this.tasksBestAt = tasksBestAt;
+        this.clean = function () {
+          // Adding a method to the constructor function: a function to all of the objects
+          alert("Cleaning in progress...");
+        };
+      }
+
+      let houseKeeper1 = new HouseKeeper("Rosa", 31, 12, [
+        "deep cleaning",
+        "laundry",
+      ]);
+
+      let houseKeeper2 = new HouseKeeper("Juan", 25, 3, [
+        "organization",
+        "mopping",
+      ]);
+
+      let houseKeeper3 = new HouseKeeper("Elisa", 33, 10, [
+        "leading a team",
+        "deep cleaning",
+      ]);
+    </script>
+  </body>
+</html>
