@@ -16,6 +16,8 @@ for (let i = 0; i < drumButtons.length; i++ ) {
         let buttonInnerHTML = this.innerHTML;
 
         makeSound(buttonInnerHTML);
+
+        buttonAnimation(buttonInnerHTML);
         
     });
    
@@ -27,6 +29,8 @@ for (let i = 0; i < drumButtons.length; i++ ) {
     document.addEventListener("keydown", function(event) {
 
         makeSound(event.key);
+
+        buttonAnimation(event.key);
 
         });
 
@@ -73,6 +77,14 @@ for (let i = 0; i < drumButtons.length; i++ ) {
 
         }
     }
+
+        function buttonAnimation(currentKey) {
+            
+            let activeButton = document.querySelector("." + currentKey);
+
+            activeButton.classList.add("pressed");
+
+        }
     
 
 //array[i] para recorrer el array en un bucle
