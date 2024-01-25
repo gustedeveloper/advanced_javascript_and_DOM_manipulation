@@ -84,6 +84,10 @@ for (let i = 0; i < drumButtons.length; i++ ) {
 
             activeButton.classList.add("pressed");
 
+            setTimeout(function() {
+                activeButton.classList.remove("pressed");
+            }, 200);
+
         }
     
 
